@@ -1,11 +1,3 @@
-/* ============================= */
-
-
-/* CONFIGURAÇÕES GERAIS */
-
-
-/* ============================= */
-
 :root {
     --fundo: #121212;
     --painel: #1c1c1c;
@@ -48,13 +40,7 @@ button {
 }
 
 
-/* ============================= */
-
-
 /* MENU LATERAL */
-
-
-/* ============================= */
 
 .sidebar {
     position: fixed;
@@ -76,10 +62,6 @@ button {
     color: white;
     font-size: 28px;
     font-weight: bold;
-}
-
-.logo span {
-    color: var(--azul-claro);
 }
 
 .menu-titulo {
@@ -121,13 +103,7 @@ button {
 }
 
 
-/* ============================= */
 
-
-/* CONTEÚDO PRINCIPAL */
-
-
-/* ============================= */
 
 .conteudo-principal {
     min-height: 100vh;
@@ -143,13 +119,9 @@ body.menu-fechado .conteudo-principal {
 }
 
 
-/* ============================= */
-
 
 /* CABEÇALHO */
 
-
-/* ============================= */
 
 .topo {
     position: sticky;
@@ -212,13 +184,7 @@ body.menu-fechado .conteudo-principal {
 }
 
 
-/* ============================= */
 
-
-/* SEÇÕES */
-
-
-/* ============================= */
 
 .secao {
     width: 92%;
@@ -251,13 +217,11 @@ body.menu-fechado .conteudo-principal {
 }
 
 
-/* ============================= */
 
 
-/* CARROSSEL PRINCIPAL */
+/* CARROSSEL */
 
 
-/* ============================= */
 
 .carrossel {
     position: relative;
@@ -728,6 +692,35 @@ body.menu-fechado .conteudo-principal {
 /* ============================= */
 
 
+/* PÁGINA DE TRAILERS */
+
+
+/* ============================= */
+
+.grade-trailers {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.video-trailer {
+    overflow: hidden;
+    border: 1px solid #333;
+    border-radius: 8px;
+    background: var(--painel);
+}
+
+.video-trailer iframe {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: 0;
+}
+
+
+/* ============================= */
+
+
 /* LANÇAMENTOS */
 
 
@@ -740,6 +733,31 @@ body.menu-fechado .conteudo-principal {
 
 .lancamento {
     display: flex;
+    min-height: 140px;
+    overflow: hidden;
+    border: 1px solid #333;
+    border-radius: 8px;
+    background: var(--painel);
+}
+
+.card-info {
+    padding: 20px;
+}
+
+.card-info h2 {
+    margin: 8px 0;
+    font-size: 20px;
+}
+
+.card-info p {
+    color: var(--texto-secundario);
+    line-height: 1.5;
+}
+
+.categoria {
+    color: #75b4ff;
+    font-size: 12px;
+    font-weight: bold;
 }
 
 .data-lancamento {
@@ -770,13 +788,7 @@ body.menu-fechado .conteudo-principal {
 }
 
 
-/* ============================= */
-
-
 /* CHAMADA PARA LANÇAMENTOS */
-
-
-/* ============================= */
 
 .chamada {
     display: flex;
@@ -807,43 +819,12 @@ body.menu-fechado .conteudo-principal {
     flex-shrink: 0;
 }
 
-
-/* ============================= */
-
-
-/* PESQUISA */
-
-
-/* ============================= */
-
-.mensagem-busca {
-    margin-top: 20px;
-    color: var(--texto-secundario);
-}
-
-.card[hidden] {
-    display: none !important;
-}
-
-
-/* ============================= */
-
-
-/* RODAPÉ */
-
-
-/* ============================= */
-
 footer {
     margin-top: 50px;
     padding: 30px 20px;
     border-top: 1px solid #333;
     text-align: center;
     color: var(--texto-secundario);
-}
-
-footer .logo {
-    margin: 0 0 12px;
 }
 
 footer p {
@@ -935,13 +916,8 @@ footer p {
 }
 
 
-/* ============================= */
-
-
 /* ANIMAÇÕES DE SCROLL */
 
-
-/* ============================= */
 
 .revelar {
     opacity: 0;
@@ -952,40 +928,4 @@ footer p {
 .revelar.visivel {
     opacity: 1;
     transform: translateY(0);
-}
-
-
-/* ============================= */
-
-
-/* PÁGINA DE SINOPSES */
-
-
-/* ============================= */
-
-.sinopses-pagina {
-    margin-left: 0;
-}
-
-.sinopses-pagina .topo {
-    justify-content: space-between;
-}
-
-.sinopse-item {
-    margin-bottom: 20px;
-    padding: 22px;
-    border: 1px solid #333;
-    border-radius: 8px;
-    background: var(--painel);
-    scroll-margin-top: 90px;
-}
-
-.sinopse-item h2 {
-    margin-bottom: 10px;
-    color: var(--azul-claro);
-}
-
-.sinopse-item p {
-    color: var(--texto-secundario);
-    line-height: 1.7;
 }
